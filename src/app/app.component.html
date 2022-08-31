@@ -1,0 +1,18 @@
+
+<div class="main" *ngIf="splash">
+
+  <h1 class="rev-block">
+    <span>weather</span>
+  </h1>
+  <h1 class="rev-block onemore">
+    <span>app</span>
+  </h1>
+  
+</div>
+
+<ng-container *ngIf="!splash">
+
+  <app-home></app-home>
+
+</ng-container>
+ 

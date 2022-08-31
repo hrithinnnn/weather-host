@@ -1,0 +1,73 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background: url('https://images.unsplash.com/photo-1530482817083-29ae4b92ff15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=44f4aebbd1e1371d5bf7dc22016c5d29&auto=format&fit=crop&w=751&q=80') no-repeat 50% 50%;
+	background-size: cover;
+  }
+  h1 {
+	text-transform: uppercase;
+	letter-spacing: 3pt;
+	font-family: Chicle;
+	color: #fff;
+	font-size: 42px;
+	padding: .4em 1em;
+	position: absolute;
+	top: 40%;
+	left: 46%;
+	transform: translate(-50%, -50%)
+  }
+  .rev-block{
+	position: absolute;
+  }
+  .rev-block span {
+	opacity: 0;
+	animation: appear-text 0.0001s linear forwards;
+	animation-delay: 1.4s;
+  }
+  .rev-block:after {
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	background: #00f0b5;
+	animation: rev-block 1.5s cubic-bezier(0.2, 1, 0.2, 1) forwards;
+	animation-delay: 1s;
+  }
+  @keyframes rev-block {
+	0% {
+	  left: 0;
+	  width: 0%;
+	}
+	50% {
+	  left: 0;
+	  width: 100%;
+	}
+	100% {
+	  left: 100%;
+	  width: 0%;
+	}
+  }
+  
+  @keyframes appear-text {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  .onemore {
+	top: 70%;
+	left: 60%;
+  }
+  .onemore span {
+	animation-delay: 2s;
+  }
+  .onemore.rev-block:after {
+	animation-delay: 1.4s;
+	background: #5e239d;
+  }
+
+  
